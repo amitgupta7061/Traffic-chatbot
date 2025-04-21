@@ -1,0 +1,46 @@
+/* Additional custom styles (most styling is handled by Tailwind) */
+
+/* Smooth scrolling for anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Chat container styling */
+.chat-container {
+    scrollbar-width: thin;
+    scrollbar-color: #3b82f6 #1f2937;
+}
+
+.chat-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.chat-container::-webkit-scrollbar-track {
+    background: #1f2937;
+}
+
+.chat-container::-webkit-scrollbar-thumb {
+    background-color: #3b82f6;
+    border-radius: 4px;
+}
+
+/* Animation for messages */
+.user-message, .bot-message {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Input focus styling */
+#user-input:focus {
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+}

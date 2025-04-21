@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeJourney - Travel Safety Assistant</title>
+    <meta name="description" content="AI-powered travel safety assistant to keep you protected on your journeys">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="assets/images/chatbot-icon.png">
+</head>
+<body class="bg-gray-900 text-gray-200 min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-gray-800 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <img class="h-8 w-8" src="assets/images/chatbot-icon.png" alt="SafeJourney Logo">
+                    </div>
+                    <div class="hidden md:block">
+                        <div class="ml-10 flex items-baseline space-x-4">
+                            <a href="#features" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Features</a>
+                            <a href="#how-it-works" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">How It Works</a>
+                            <a href="#testimonials" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Testimonials</a>
+                            <a href="#faq" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">FAQ</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-4 flex items-center md:ml-6">
+                        <button id="chat-toggle" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300">
+                            Open Safety Chat
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-gradient-to-r from-gray-800 to-gray-900 py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 text-white">Travel With Confidence</h1>
+            <p class="text-xl md:text-2xl mb-8 text-gray-300 max-w-3xl mx-auto">
+                Your AI-powered travel safety companion providing real-time advisories, emergency contacts, and personalized safety tips.
+            </p>
+            <div class="flex justify-center space-x-4">
+                <button id="cta-chat" class="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 rounded-lg text-lg font-semibold transition duration-300">
+                    Ask Safety Questions
+                </button>
+                <a href="#features" class="bg-gray-700 hover:bg-gray-600 text-white px-8 py-3 rounded-lg text-lg font-semibold transition duration-300">
+                    Learn More
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Stats Section -->
+    <section class="py-12 bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="p-6 bg-gray-700 rounded-lg shadow-lg">
+                    <h3 class="text-3xl font-bold text-indigo-400">50,000+</h3>
+                    <p class="mt-2 text-gray-300">Safety queries answered daily</p>
+                </div>
+                <div class="p-6 bg-gray-700 rounded-lg shadow-lg">
+                    <h3 class="text-3xl font-bold text-indigo-400">190+</h3>
+                    <p class="mt-2 text-gray-300">Countries covered</p>
+                </div>
+                <div class="p-6 bg-gray-700 rounded-lg shadow-lg">
+                    <h3 class="text-3xl font-bold text-indigo-400">24/7</h3>
+                    <p class="mt-2 text-gray-300">Real-time updates</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12 text-white">Your Comprehensive Travel Safety Solution</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="bg-gray-800 p-8 rounded-xl shadow-2xl hover:shadow-indigo-500/20 transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-indigo-600 p-3 rounded-full mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white">Real-Time Advisories</h3>
+                    </div>
+                    <p class="text-gray-400">Get up-to-date information on safety conditions, political situations, health alerts, and natural disasters for your destination.</p>
+                    <img src="assets/images/travel-advisory.jpg" alt="Travel Advisory" class="mt-6 rounded-lg w-full h-48 object-cover">
+                </div>
+                
+                <div class="bg-gray-800 p-8 rounded-xl shadow-2xl hover:shadow-indigo-500/20 transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-indigo-600 p-3 rounded-full mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white">Interactive Safety Maps</h3>
+                    </div>
+                    <p class="text-gray-400">Visualize safe zones, high-risk areas, and recommended routes with our color-coded interactive maps.</p>
+                    <img src="assets/images/safety-map.jpg" alt="Safety Map" class="mt-6 rounded-lg w-full h-48 object-cover">
+                </div>
+                
+                <div class="bg-gray-800 p-8 rounded-xl shadow-2xl hover:shadow-indigo-500/20 transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-indigo-600 p-3 rounded-full mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white">Emergency Contacts</h3>
+                    </div>
+                    <p class="text-gray-400">Instant access to local emergency numbers, embassy contacts, hospitals, and police stations for any destination.</p>
+                    <img src="assets/images/emergency-contacts.jpg" alt="Emergency Contacts" class="mt-6 rounded-lg w-full h-48 object-cover">
+                </div>
+                
+                <div class="bg-gray-800 p-8 rounded-xl shadow-2xl hover:shadow-indigo-500/20 transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-indigo-600 p-3 rounded-full mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white">Personalized Safety Tips</h3>
+                    </div>
+                    <p class="text-gray-400">Receive customized recommendations based on your travel itinerary, personal profile, and risk tolerance.</p>
+                    <div class="mt-6 bg-gray-700 p-4 rounded-lg">
+                        <p class="text-indigo-400 italic">"Based on your solo female travel to Istanbul, we recommend..."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-20 bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12 text-white">How SafeJourney Works</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="bg-indigo-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-white text-2xl font-bold">1</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-2">Ask Your Question</h3>
+                    <p class="text-gray-400">Type or speak your travel safety question in natural language.</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-indigo-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-white text-2xl font-bold">2</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-2">AI Analysis</h3>
+                    <p class="text-gray-400">Our system processes thousands of data points to provide accurate information.</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-indigo-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-white text-2xl font-bold">3</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-2">Get Actionable Advice</h3>
+                    <p class="text-gray-400">Receive clear, practical safety recommendations instantly.</p>
+                </div>
+            </div>
+            
+            <div class="mt-16 bg-gray-900 rounded-xl p-8 shadow-lg max-w-4xl mx-auto">
+                <h3 class="text-2xl font-semibold text-white mb-6 text-center">Example Questions You Can Ask</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="bg-gray-700 p-4 rounded-lg">
+                        <p class="text-indigo-400">"Is it safe to travel to Mexico City right now?"</p>
+                    </div>
+                    <div class="bg-gray-700 p-4 rounded-lg">
+                        <p class="text-indigo-400">"What are the emergency numbers in Japan?"</p>
+                    </div>
+                    <div class="bg-gray-700 p-4 rounded-lg">
+                        <p class="text-indigo-400">"Are there any health advisories for travelers to Brazil?"</p>
+                    </div>
+                    <div class="bg-gray-700 p-4 rounded-lg">
+                        <p class="text-indigo-400">"What safety precautions should I take as a solo female traveler in Egypt?"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12 text-white">What Travelers Are Saying</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-indigo-600 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold mr-3">JD</div>
+                        <div>
+                            <h4 class="text-white font-medium">Jane D.</h4>
+                            <div class="flex text-yellow-400">
+                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 italic">"SafeJourney warned me about political demonstrations in Santiago that weren't even on the news yet. Changed my route and avoided a potentially dangerous situation."</p>
+                </div>
+                
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-indigo-600 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold mr-3">MR</div>
+                        <div>
+                            <h4 class="text-white font-medium">Miguel R.</h4>
+                            <div class="flex text-yellow-400">
+                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 italic">"When I got food poisoning in Bangkok, the chatbot immediately located the nearest English-speaking doctor and provided translation for my symptoms. Lifesaver!"</p>
+                </div>
+                
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-indigo-600 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold mr-3">AS</div>
+                        <div>
+                            <h4 class="text-white font-medium">Aisha S.</h4>
+                            <div class="flex text-yellow-400">
+                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 italic">"As a solo female traveler, I rely on SafeJourney's personalized safety tips. Their advice about safe neighborhoods in Istanbul was spot on."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 bg-gray-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12 text-white">Frequently Asked Questions</h2>
+            
+            <div class="space-y-6">
+                <div class="bg-gray-700 rounded-lg overflow-hidden">
+                    <button class="faq-question w-full text-left p-6 focus:outline-none">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-lg font-medium text-white">How current is the safety information?</h3>
+                            <svg class="faq-icon h-5 w-5 text-indigo-400 transform transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="faq-answer px-6 pb-6 hidden">
+                        <p class="text-gray-400">Our AI system continuously monitors and updates information from government travel advisories, local news sources, and verified reports. Most information is updated in real-time, with comprehensive reviews every 6 hours.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-700 rounded-lg overflow-hidden">
+                    <button class="faq-question w-full text-left p-6 focus:outline-none">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-lg font-medium text-white">Is there a mobile app available?</h3>
+                            <svg class="faq-icon h-5 w-5 text-indigo-400 transform transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="faq-answer px-6 pb-6 hidden">
+                        <p class="text-gray-400">Currently, SafeJourney is web-based for maximum accessibility. You can save it to your home screen for an app-like experience. Native mobile apps are in development and will be released soon.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-700 rounded-lg overflow-hidden">
+                    <button class="faq-question w-full text-left p-6 focus:outline-none">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-lg font-medium text-white">How does this compare to government travel advisories?</h3>
+                            <svg class="faq-icon h-5 w-5 text-indigo-400 transform transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="faq-answer px-6 pb-6 hidden">
+                        <p class="text-gray-400">We aggregate and analyze data from multiple government sources (US, UK, Canada, Australia, etc.) along with local reports to provide a more comprehensive view. Our AI also personalizes recommendations based on your specific circumstances.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-700 rounded-lg overflow-hidden">
+                    <button class="faq-question w-full text-left p-6 focus:outline-none">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-lg font-medium text-white">What languages does the chatbot support?</h3>
+                            <svg class="faq-icon h-5 w-5 text-indigo-400 transform transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="faq-answer px-6 pb-6 hidden">
+                        <p class="text-gray-400">The chatbot currently understands and responds in English, Spanish, French, German, and Mandarin. More languages are being added regularly.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-indigo-900 to-purple-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">Ready to Travel With Confidence?</h2>
+            <p class="text-xl mb-8 text-indigo-200 max-w-3xl mx-auto">
+                Get instant answers to all your travel safety questions with our AI-powered assistant.
+            </p>
+            <button id="cta-chat-bottom" class="bg-white hover:bg-gray-100 text-indigo-800 px-10 py-4 rounded-lg text-lg font-semibold transition duration-300 shadow-lg">
+                Start Safety Chat Now
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-white font-semibold mb-4">SafeJourney</h3>
+                    <p class="text-gray-400">Your trusted AI travel safety companion, providing real-time advisories and personalized recommendations.</p>
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#features" class="text-gray-400 hover:text-white transition">Features</a></li>
+                        <li><a href="#how-it-works" class="text-gray-400 hover:text-white transition">How It Works</a></li>
+                        <li><a href="#testimonials" class="text-gray-400 hover:text-white transition">Testimonials</a></li>
+                        <li><a href="#faq" class="text-gray-400 hover:text-white transition">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Legal</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Terms of Service</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Disclaimer</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Contact</h3>
+                    <ul class="space-y-2">
+                        <li class="text-gray-400">support@safejourney.ai</li>
+                        <li class="text-gray-400">+1 (555) 123-4567</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500 text-sm">
+                <p>© 2023 SafeJourney. All rights reserved. This is a demo application.</p>
+                <p class="mt-2">Note: This service provides general travel safety information and should not replace official government advisories or professional advice.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chatbot Modal -->
+    <div id="chat-modal" class="fixed inset-0 z-50 hidden overflow-y-auto">
+        <div class="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+            <div class="fixed inset-0 transition-opacity" aria-hidden="true">
+                <div class="absolute inset-0 bg-gray-900 opacity-75"></div>
+            </div>
+            
+            <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+            
+            <div class="inline-block align-bottom bg-gray-800 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
+                <div class="px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-lg leading-6 font-medium text-white">
+                            SafeJourney Assistant
+                        </h3>
+                        <button id="close-chat" class="text-gray-400 hover:text-white">
+                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+                    
+                    <div id="chat-container" class="h-96 overflow-y-auto mb-4 bg-gray-900 rounded-lg p-4 space-y-4">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 bg-indigo-600 rounded-full p-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <div class="ml-3">
+                                <div class="bg-gray-700 rounded-lg p-3">
+                                    <p class="text-sm text-gray-200">Hello! I'm your SafeJourney assistant. How can I help with your travel safety concerns today?</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <div class="flex">
+                            <input id="user-input" type="text" class="flex-1 bg-gray-700 text-white rounded-l-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Ask a travel safety question...">
+                            <button id="send-btn" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-r-lg transition duration-300">
+                                Send
+                            </button>
+                        </div>
+                        <p class="mt-2 text-xs text-gray-400">Note: For emergencies, always contact local authorities directly.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
