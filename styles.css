@@ -44,3 +44,47 @@ html {
 #user-input:focus {
     box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
 }
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+.team-member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 160px;
+}
+.team-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    border: 4px solid var(--primary);
+    box-shadow: 0 4px 18px rgba(108,92,231,0.18);
+    margin-bottom: 18px;
+    transition: transform 0.3s;
+}
+.team-photo:hover {
+    transform: scale(1.07) rotate(-2deg);
+    box-shadow: 0 8px 28px rgba(108,92,231,0.28);
+}
+.team-name {
+    font-size: 1.1rem;
+    color: var(--dark-text);
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+@media (max-width: 700px) {
+    .team-member { width: 48%; margin-bottom: 30px; }
+    .team-photo { width: 90px; height: 90px; }
+}
+@media (max-width: 500px) {
+    .team-member { width: 100%; }
+}
